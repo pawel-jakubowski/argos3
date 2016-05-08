@@ -296,8 +296,8 @@ namespace argos {
 #endif
       CQTOpenGLCamera m_cCamera;
       SFrameGrabData m_sFrameGrabData;
-      QElapsedTimer m_cTimer;
-      qreal m_fFps;
+      QElapsedTimer m_cElapsedTimer;
+      qreal m_fFPS;
 
       enum EDirection {
          DIRECTION_UP = 1,
