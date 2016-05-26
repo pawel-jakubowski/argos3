@@ -377,9 +377,9 @@ namespace argos {
           * Process them, keeping the closest hit
           */
          GLuint unNames;
-         GLuint* punByte;
+         GLuint* punByte = nullptr;
          GLuint unMinZ;
-         GLuint* punName;
+         GLuint* punName = nullptr;
          punByte = m_punSelectionBuffer;
          unMinZ = 0xffffffff;
          for (UInt32 i = 0; i < unHits; i++) {	
