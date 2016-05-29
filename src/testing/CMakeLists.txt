@@ -59,8 +59,8 @@ endif(ARGOS_BUILD_FOR_SIMULATOR OR ARGOS_BUILD_FOR STREQUAL "foot-bot")
 
 if(ARGOS_BUILD_FOR_SIMULATOR AND GOOGLEPERFTOOLS_FOUND)
   add_executable(argos3_prof
-    ${CMAKE_SOURCE_DIR}/core/simulator/query_plugins.cpp
-    ${CMAKE_SOURCE_DIR}/core/simulator/main.cpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/../core/simulator/query_plugins.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../core/simulator/main.cpp)
   target_link_libraries(argos3_prof
     tcmalloc profiler
     argos3core_simulator
