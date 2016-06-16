@@ -247,6 +247,51 @@ namespace argos {
          return (m_fX != c_vector2.m_fX || m_fY != c_vector2.m_fY);
       }
 
+
+       /**
+        * Returns <tt>true</tt> if this vector is smaller than the passed one.
+        * This method checks all the coordinates, and returns <tt>true</tt> only
+        * if the condition is true for all of them.
+        * @param c_vector2 The other vector.
+        * @return <tt>true</tt> if this vector is smaller than the passed one.
+        */
+       inline bool operator<(const CVector2& c_vector2) const {
+           return m_fX < c_vector2.m_fX && m_fY < c_vector2.m_fY;
+       }
+
+       /**
+        * Returns <tt>true</tt> if this vector is smaller than or equal to the passed one.
+        * This method checks all the coordinates, and returns <tt>true</tt> only
+        * if the condition is true for all of them.
+        * @param c_vector2 The other vector.
+        * @return <tt>true</tt> if this vector is smaller than or equal to the passed one.
+        */
+       inline bool operator<=(const CVector2& c_vector2) const {
+           return m_fX <= c_vector2.m_fX && m_fY <= c_vector2.m_fY;
+       }
+
+       /**
+        * Returns <tt>true</tt> if this vector is greater than the passed one.
+        * This method checks all the coordinates, and returns <tt>true</tt> only
+        * if the condition is true for all of them.
+        * @param c_vector2 The other vector.
+        * @return <tt>true</tt> if this vector is greater than the passed one.
+        */
+       inline bool operator>(const CVector2& c_vector2) const {
+           return m_fX > c_vector2.m_fX && m_fY > c_vector2.m_fY;
+       }
+
+       /**
+        * Returns <tt>true</tt> if this vector is greater than or equal to the passed one.
+        * This method checks all the coordinates, and returns <tt>true</tt> only
+        * if the condition is true for all of them.
+        * @param c_vector2 The other vector.
+        * @return <tt>true</tt> if this vector is greater than or equal to the passed one.
+        */
+       inline bool operator>=(const CVector2& c_vector2) const {
+           return m_fX >= c_vector2.m_fX && m_fY >= c_vector2.m_fY;
+       }
+
       /**
        * Sums the passed vector to this vector.
        * @param c_vector2 The other vector.
