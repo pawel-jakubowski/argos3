@@ -183,7 +183,8 @@ namespace argos {
                                             const CQuaternion& c_orientation,
                                             const std::vector<CVector2>& vec_points,
                                             const CColor& c_color,
-                                            const bool b_fill) {
+                                            const bool b_fill,
+                                            const Real lineWidth) {
       if(vec_points.size() < 2) {
          LOGERR << "CQTOpenGLUserFunctions::DrawPolygon() needs at least 3 points." << std::endl;
          return;
@@ -193,9 +194,11 @@ namespace argos {
       /* Set color */
       SetColor(c_color);
       /* Disable face culling, to make the triangle visible from any angle */
-	    glDisable(GL_CULL_FACE);
+      glDisable(GL_CULL_FACE);
+      /* Set line width */
+      glLineWidth(lineWidth);
       /* Set polygon attributes */
-	    glEnable(GL_POLYGON_SMOOTH);
+	  glEnable(GL_POLYGON_SMOOTH);
       glPolygonMode(GL_FRONT_AND_BACK, b_fill ? GL_FILL : GL_LINE);
       /* Set position/orientation */
       Rototranslate(c_position, c_orientation);

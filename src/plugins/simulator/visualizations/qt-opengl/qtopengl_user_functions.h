@@ -239,7 +239,8 @@ namespace argos {
                        const CQuaternion& c_orientation,
                        const std::vector<CVector2>& vec_points,
                        const CColor& c_color = CColor::RED,
-                       const bool b_fill = true);
+                       const bool b_fill = true,
+                       const Real lineWidth = 1);
 
       /**
        * Draws a circle.
